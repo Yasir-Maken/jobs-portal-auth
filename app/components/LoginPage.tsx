@@ -1,23 +1,37 @@
+//
 // app/components/LoginPage.tsx
+
+// This component serves as the main entry point for user authentication.
+// It displays a two-column layout: a hero section and a dynamic form section
+// that allows users to switch between login and signup forms.
+
 "use client";
 
-import React, { useState } from "react";
-import LoginForm from "./LoginForm";
-import SignUpForm from "./SignUpForm";
+import React, { useState } from "react"; // useState for managing form visibility
+import LoginForm from "./LoginForm"; // Component for the login form
+import SignUpForm from "./SignUpForm"; // Component for the signup form
 
+/**
+ * LoginPage component.
+ * Manages the display and transition between the LoginForm and SignUpForm.
+ */
 const LoginPage: React.FC = () => {
+  // State to control which form is currently visible: true for Login, false for Sign Up.
   const [showLogin, setShowLogin] = useState(true);
 
+  // Function to switch the active form to the Sign Up form.
   const handleSignUpClick = () => {
     setShowLogin(false);
   };
 
+  // Function to switch the active form back to the Login form.
   const handleSignInClick = () => {
     setShowLogin(true);
   };
 
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4 sm:p-6 lg:p-8 font-inter">
+      {/* Main container for the two-column layout, with rounded corners and shadow. */}
       <div className="flex flex-col md:flex-row bg-white rounded-xl shadow-2xl overflow-hidden w-full max-w-6xl">
         {/* Left Column: Hero Image Section */}
         <div className="md:w-1/2 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center p-8 relative overflow-hidden z-10">
@@ -25,7 +39,7 @@ const LoginPage: React.FC = () => {
           <div className="absolute top-0 left-0 w-48 h-48 bg-white opacity-10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
           <div className="absolute bottom-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full translate-x-1/2 -translate-y-1/2"></div>
 
-          {/* Placeholder for Hero Image */}
+          {/* Content for the Hero Section */}
           <div className="text-white text-center p-4">
             <svg
               className="w-32 h-32 mx-auto mb-4"

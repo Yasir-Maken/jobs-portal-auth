@@ -1,9 +1,16 @@
 // app/components/NotFoundPage.tsx
+// This component renders a custom 404 "Page Not Found" error page.
+
 "use client";
 
+import Link from "next/link"; // Next.js Link component for client-side navigation
 import React from "react";
-import Link from "next/link"; // Use next/link for client-side navigation
 
+/**
+ * NotFoundPage component.
+ * Displays a user-friendly message when a requested page is not found.
+ * Includes a link to return to the homepage.
+ */
 const NotFoundPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4 sm:p-6 lg:p-8 font-inter text-center">
