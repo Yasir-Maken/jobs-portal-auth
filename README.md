@@ -47,7 +47,7 @@ Follow these steps to get the project up and running on your local machine.
 ### 1\. Clone the Repository
 
 ```
-git clone <your-repository-url> # Replace with your actual repo URL
+git clone https://github.com/Yasir-Maken/jobs-portal-auth.git
 cd jobs-portal-auth
 ```
 
@@ -122,9 +122,7 @@ Use the following mock credentials (from `lib/users.ts`):
 - - **Email:** `jobseeker1@example.com`
 -
 - - **Password:** `password123`
--
-
-**Employer:**
+- **Employer:**
 
 - - **Email:** `employer1@example.com`
 -
@@ -138,3 +136,5 @@ Navigate to the login page and click "Sign Up". Fill in the details for a new us
 ### Signing Out
 
 Click the "Sign Out" button located at the top-right of the dashboard pages.
+
+# Yasir Maken -->> Zool Developer
